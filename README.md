@@ -17,6 +17,8 @@ http://10.10.244.11/a70.htm?wlanuserip=内网地址&wlanacip=10.165.255.254&wlan
 
 注意脚本在获得内网地址的设备上运行，否则CURRENT_IP无法正确获取。
 
+路由器缺失curl的话安装一下就好了，软件包名称：curl，自动安装依赖。
+
 # 对照下图补充修改就可以了
 ![4.42.13.jpg](https://i.loli.net/2021/06/01/izoITGnDBNkLAwS.jpg)
 
