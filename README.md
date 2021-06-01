@@ -1,7 +1,7 @@
 # njupt.drcom 上网登陆脚本
 南京邮电大学校园网上网登陆脚本
 
-本项目完全参考[hisaner/Drcom-Padavan](https://github.com/hisaner/Drcom-Padavan/blob/main/README.md)
+本项目完全参考[hisaner/Drcom-Padavan](https://github.com/hisaner/Drcom-Padavan/blob/main)
 
 hostname=10.10.244.11
 wlanacip=10.165.255.254（仙林宿舍北区、大学生活动中心）
@@ -16,6 +16,9 @@ http://10.10.244.11/a70.htm?wlanuserip=内网地址&wlanacip=10.165.255.254&wlan
 第二个sleep 5s在mac和pandoraBox中会报错，但是不影响运行。
 
 注意脚本在获得内网地址的设备上运行，否则CURRENT_IP无法正确获取。
+
+# 对照下图补充修改就可以了
+![4.42.13.jpg](https://i.loli.net/2021/06/01/izoITGnDBNkLAwS.jpg)
 
 # 原理
 学校有线网络 Web 认证的本质，就是发送一个 HTTP-POST 请求到认证服务器。因此，我们只需要用 curl 构造一个 POST 请求，并且在每次路由器重启后都发送一遍即可实现自动认证。<br />
