@@ -1,5 +1,6 @@
 # njupt.drcom 上网登陆脚本
 南京邮电大学校园网上网登陆脚本
+南邮校园网上网登陆脚本
 
 本项目完全参考[hisaner/Drcom-Padavan](https://github.com/hisaner/Drcom-Padavan/blob/main)
 
