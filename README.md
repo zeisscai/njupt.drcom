@@ -13,6 +13,11 @@ wlanacname=XL-BRAS-SR8806-X&mac=00-00-00-00-00-00
 http://10.10.244.11/a70.htm?wlanuserip=内网地址&wlanacip=10.165.255.254&wlanacname=XL-BRAS-SR8806-X
 
 按照原文操作即可。
+
+路由器里分别添加一个启动项和计划任务。
+启动项：方便舍友断电重启，重连。
+计划任务：每天早上7点10分登陆。
+
 ## 补充说明
 第二个sleep 5s在mac和pandoraBox中会报错，但是不影响运行。
 
@@ -22,6 +27,8 @@ http://10.10.244.11/a70.htm?wlanuserip=内网地址&wlanacip=10.165.255.254&wlan
 
 # 对照下图补充修改就可以了
 ![4.42.13.jpg](https://i.loli.net/2021/06/01/izoITGnDBNkLAwS.jpg)
+
+ps，第19行还有一个要替换的CURRENT_IP。
 
 # 原理
 学校有线网络 Web 认证的本质，就是发送一个 HTTP-POST 请求到认证服务器。因此，我们只需要用 curl 构造一个 POST 请求，并且在每次路由器重启后都发送一遍即可实现自动认证。<br />
