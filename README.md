@@ -29,8 +29,12 @@ http://10.10.244.11/a70.htm?wlanuserip=内网地址&wlanacip=10.165.255.254&wlan
 
 路由器缺失curl的话安装一下就好了，软件包名称：curl，自动安装依赖。
 
-建议将获取本机ip的命令改为：CURRENT_IP=$(ifconfig -a|grep inet|grep -v 127|grep -v 192|grep -v inet6|awk '{print $2}'|tr -d "addr:")
-获取inet、去掉127，192字段和inet6。
+建议将获取本机ip的命令改为：
+ifconfig wlan0|grep inet|grep -v inet6|awk '{print $2}'|cut -d ':' -f2)
+**openwrt可以使用上面这个**
+
+*CURRENT_IP=$(ifconfig -a|grep inet|grep -v 127|grep -v 192|grep -v inet6|awk '{print $2}'|tr -d "addr:")
+获取inet、去掉127，192字段和inet6。*
 
 # 对照下图补充修改就可以了
 ![4.42.13.jpg](https://i.loli.net/2021/06/01/izoITGnDBNkLAwS.jpg)
