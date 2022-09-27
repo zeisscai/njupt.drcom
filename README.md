@@ -2,6 +2,8 @@
 南京邮电大学校园网上网登陆脚本
 南邮校园网上网登陆脚本
 
+[我的博客上的教程](https://zwiss.fun/2021/07/27/%e5%8d%97%e9%82%ae%e6%a0%a1%e5%9b%ad%e7%bd%91%e8%87%aa%e5%8a%a8%e7%99%bb%e9%99%86%e8%84%9a%e6%9c%ac/)
+
 推荐挂在路由器上使用（需要刷第三方固件）推荐华硕acrh17，二手价格150左右（2021.05）刷机过程非常简单。参考我在恩山的[帖子](https://www.right.com.cn/forum/thread-4137387-1-1.html)
 
 本项目完全参考[hisaner/Drcom-Padavan](https://github.com/hisaner/Drcom-Padavan)
