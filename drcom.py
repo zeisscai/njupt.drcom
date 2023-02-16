@@ -3,6 +3,7 @@
 
 import os
 import time
+import sys
 import requests
 import subprocess
 
@@ -15,7 +16,7 @@ upass=""
 # 1. use your cellphone to connect to the wifi of your computer or of your campus
 # 2. visit a website, such as baidu, then the browser should jump to the login page
 # 3. copy the address of this login page, and paste it to the LoginUrl below.
-LoginUrl = "http://192.168.168.168/a30.htm"
+LoginUrl = "http://192.168.168.168/0.htm"
 LogoutUrl = "http://192.168.168.168/F.htm"
 
 ZeroMKKey = '123456'
@@ -46,7 +47,7 @@ def logout():
 
 def ping_ips(ips):
     for ip in ips.split(";"):
-        ret = subprocess.Popen("ping -n 1 -w 1 %s " % ip, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        ret = subprocess.Popen("ping -c 1 %s " % ip, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         ret.communicate()
 
         if ret.returncode == 0:
@@ -62,7 +63,7 @@ def keep_login():
         if ping_ips(PingIpAddresses) == False:
             login()
         else:
-            time.sleep(SleepTime)
+            sys.exit()
 
 
 if __name__ == "__main__":
