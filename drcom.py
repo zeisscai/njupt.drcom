@@ -7,8 +7,8 @@ import requests
 import subprocess
 
 # enter the username and password of your drcom account here
-username="21767900"
-upass="abc123456+"
+username=""
+upass=""
 # urls for login
 # In different college, it is different
 # but you can find out what it is by doing:
@@ -23,7 +23,7 @@ ZeroMKKey = '123456'
 # www.baidu.com ; www.so.com
 # here is the ip addresses that used to ping, so we can find out if we are online.
 # you can use ";" to seperate the ip addresses that you want to use to ping.
-PingIpAddresses = "223.5.5.5;223.6.6.6"
+PingIpAddresses = "223.5.5.5"
 
 SleepTime = 5
 
